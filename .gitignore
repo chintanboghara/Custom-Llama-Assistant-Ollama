@@ -1,0 +1,25 @@
+# Ignore compiled files or local configurations
+*.bin
+*.pt
+*.zip
+*.log
+
+# Ignore environment-specific files
+.env
+.venv
+venv/
+env/
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Ollama cache and local model files
+.ollama/
+models/
