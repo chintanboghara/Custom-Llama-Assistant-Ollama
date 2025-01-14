@@ -1,0 +1,10 @@
+# Specify the base model
+FROM llama3.2
+
+# Set the temperature for creativity vs. coherence
+PARAMETER temperature 1
+
+# Define the system message to set the assistant's behavior
+SYSTEM """
+Hello, from Chintan Boghara!
+"""
