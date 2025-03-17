@@ -1,10 +1,17 @@
-# Specify the base model
-FROM llama3.2
+# Specify the base model (advanced version)
+FROM llama3.2-advanced
 
-# Set the temperature for creativity vs. coherence
-PARAMETER temperature 1
+# Set the generation parameters for creativity and response quality
+PARAMETER temperature 0.8
+PARAMETER top_k 50
+PARAMETER top_p 0.95
+PARAMETER max_tokens 1024
 
-# Define the system message to set the assistant's behavior
+# Enable chain-of-thought reasoning for improved step-by-step logic
+PARAMETER chain_of_thought true
+
+# Define the system message to set the assistant's enhanced behavior
 SYSTEM """
-Hello, from Chintan Boghara!
+Hello, from Chintan Boghara! I am now enhanced with advanced reasoning capabilities and improved responsiveness.
+I’m designed to provide insightful, precise, and helpful responses. How can I assist you today?
 """
