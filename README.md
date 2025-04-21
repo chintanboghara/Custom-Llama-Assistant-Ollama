@@ -1,17 +1,16 @@
 # Custom LLaMA Assistant (Ollama)
 
-This repository contains a `Modelfile` for configuring a custom LLaMA-based assistant using Ollama. The updated assistant is enhanced with advanced reasoning capabilities and improved responsiveness. It greets users with a custom message and provides insightful, friendly, and helpful responses.
+This repository contains a `Modelfile` for configuring a custom LLaMA-based assistant using Ollama. The assistant is built on the `llama3.2-advanced` model and is enhanced with advanced reasoning capabilities, including chain-of-thought reasoning for improved step-by-step logic. It greets users with a custom message and is designed to provide insightful, precise, and helpful responses across a wide range of topics.
 
 ## Features
-- **Model:** `llama3.2-advanced`
-- **Temperature:** `0.8` (balanced creativity and coherence)
+
+- **Base Model:** `llama3.2-advanced`
+- **Temperature:** `0.8` (for balanced creativity and coherence)
 - **Top-K Sampling:** `50`
 - **Top-P Sampling:** `0.95`
 - **Maximum Tokens:** `1024`
-- **Chain-of-Thought Reasoning:** Enabled
-- **System Prompt:** Updated to reflect enhanced behavior with a custom greeting.
-- **Custom Greeting:** 
-  > "Hello, from Chintan Boghara! I am now enhanced with advanced reasoning capabilities and improved responsiveness. I’m designed to provide insightful, precise, and helpful responses. How can I assist you today?"
+- **Chain-of-Thought Reasoning:** Enabled (allows the assistant to handle complex queries with detailed, logical explanations)
+- **Custom System Prompt:** Sets the assistant's behavior to be friendly, insightful, and precise, with a personalized greeting from Chintan Boghara.
 
 ## Modelfile Example
 
@@ -35,14 +34,21 @@ I’m designed to provide insightful, precise, and helpful responses. How can I 
 """
 ```
 
+## Prerequisites
+
+- Ensure you have [Ollama](https://ollama.ai/) installed on your system.
+- Place the `Modelfile` in your working directory.
+
 ## Steps to Run
 
-**Create the model**
-```bash
-ollama create custom-assistant -f ./Modelfile
-```
+1. **Create the model:**
 
-**Run the model**
-```bash
-ollama run custom-assistant
-```
+   ```bash
+   ollama create custom-assistant -f ./Modelfile
+   ```
+
+2. **Run the model:**
+
+   ```bash
+   ollama run custom-assistant
+   ```
